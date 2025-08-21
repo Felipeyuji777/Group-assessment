@@ -10,17 +10,20 @@ menu = [
 ]
 
 print("Welcome to BUV Beans and Leaves!")
-print("1. View Menu")
-print("2. Place Order")
-print("3. Cancel Order")
-print("4. View Current Orders")
-print("5. Calculate Order Total")
-print("6. Complete Order")
-print("7. Show Total Income")
+while True:
+    print("1. View Menu")
+    print("2. Place Order")
+    print("3. Cancel Order")
+    print("4. View Current Orders")
+    print("5. Calculate Order Total")
+    print("6. Complete Order")
+    print("7. Show Total Income")
 
-option = int(input("Select an option (1/2/3/4/5/6/7): "))
+    option = int(input("Select an option (1/2/3/4/5/6/7): "))
 
-if option == 1:
-    print("==== MENU ====")
-    for item in menu:
-        print(item)
+    if option == 1:
+        print("==== MENU ====")
+        for item in menu:
+            print(item)
+    elif option == 2:
+        orders = input("Select your order: ")
