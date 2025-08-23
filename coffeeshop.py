@@ -26,4 +26,11 @@ while True:
         for item in menu:
             print(item)
     elif option == 2:
-        orders = input("Select your order: ")
+        items = input("Select your order: ")
+        orders.append(items)
+    elif option == 3:
+        cancel = input("Cancel an order: ")
+        orders.remove(cancel)
+    elif option == 4:
+        print(f"Your current orders:{orders}")
+
