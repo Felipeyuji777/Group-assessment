@@ -9,7 +9,11 @@ menu = [
 orders = []
 total_income = 0.0
 
+discount_threshold = 100000
+discount_rate = 0.1
+
 print("Welcome to BUV Beans and Leaves!")
+print("Now we have a special discount: 10% off for orders over 100,000 VND.")
 print("1. View Menu")
 print("2. Place Order")
 print("3. Cancel Order")
@@ -55,12 +59,21 @@ while True:
             print("No items in your order.")
         else:
             total = sum(item['price'] for item in orders)
-            print(f"Total order amount: {total} VND")
+            discount = 0
+            if total >= discount_threshold:
+                discount = total * discount_rate
+                total -= discount
+                print(f"You received a discount of 10%!")
+            print(f"Now the total order amount is: {total} VND")
     elif option == 6:
         if not orders:
             print("No items to complete order.")
         else:
             total = sum(item['price'] for item in orders)
+            discount = 0
+            if total >= discount_threshold:
+                discount = total * discount_rate
+                total -= discount
             total_income += total
             print(f"Order completed. Total amount: {total} VND")
             orders.clear()
