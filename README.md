@@ -36,3 +36,6 @@ Phin đen đá – 30,000 VND
 Notes:
 - All prices are in VND (Vietnamese Dong)
 - The system stores orders and total income only during the session (no database or file storage)
+
+Made by Felipe, Anton, Nghia, Khai and Minh
+Enjoy your coffee experience at BUV Beans and Leaves!
