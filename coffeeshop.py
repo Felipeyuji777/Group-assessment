@@ -3,8 +3,8 @@ menu = [
     {"name": "Americano", "price": 30000},
     {"name": "Latte", "price": 55000},
     {"name": "Cappuccino", "price": 55000},
-    {"name": "Phin sữa đá", "price": 30000},
-    {"name": "Phin đen đá", "price": 30000}
+    {"name": "Phin sua da", "price": 30000},
+    {"name": "Phin den da", "price": 30000}
 ]
 
 
@@ -120,3 +120,4 @@ while True:
     elif option == 8:
         print("Exiting the system. Thanks for visiting BUV Beans and Leaves!")
         break
+
