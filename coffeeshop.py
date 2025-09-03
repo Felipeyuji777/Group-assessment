@@ -1,4 +1,4 @@
-#define lsit with our menu
+# Define list with our menu items
 menu = [
     {"name": "Americano", "price": 30000},
     {"name": "Latte", "price": 55000},
@@ -8,19 +8,19 @@ menu = [
 ]
 
 
-#List that keeps track of our orders
+# List that keeps track of our orders
 orders = []
 
-#total income for the shop
+# Total income for the shop
 total_income = 0.0
 
-#how much a customer needs to buy for to get discount
+# How much a customer needs to buy for to get discount
 discount_threshold = 100000
 
-#discount as decimal
+# Discount as decimal
 discount_rate = 0.1
 
-#Print user options
+# Print user options
 print("Welcome to BUV Beans and Leaves!")
 print("Now we have a special discount: 10% off for orders over 100,000 VND.")
 print("1. View Menu")
@@ -33,24 +33,32 @@ print("7. Show Total Income")
 print("8. Exit")
 
 while True:
-    #temp value that captures user input
-    option = int(input("Select an option (1-8): "))
+    try:
+        # Temp value that captures user input
+        option = int(input("Select an option (1-8): "))
+    except ValueError: # Handle non-integer input
+        print("Invalid input. Please enter a number between 1 and 8.")
+        continue
 
-    #View Menu
+    if option not in range(1, 9):
+        print("Invalid option. Please select a number between 1 and 8.")
+        continue
+
+    # View Menu
     if option == 1:
         print("\n--- Menu ---")
         
-        #iterate through menu[] and print each value
+        # Iterate through menu[] and print each value
         for idx, item in enumerate(menu, 1):
             print(f"{idx}. {item['name']}: {item['price']} VND")
         print("------------\n")
     
-    #Place order 
+    # Place order 
     elif option == 2:
         #capture user input
         item_name = input("Enter the name of the item to order: ")
         
-        #search for userinput in menu
+        # Search for userinput in menu
         found = next((item for item in menu if item["name"].lower() == item_name.lower()), None)
         if found:
             orders.append(found)
@@ -58,12 +66,12 @@ while True:
         else:
             print("Item not found in menu.")
     
-    #cancel an order
+    # Cancel an order
     elif option == 3:
         #capture user input
         item_name = input("Enter the name of the item to cancel: ")
         
-        #search for userinput in menu
+        # Search for userinput in menu
         found = next((item for item in orders if item["name"].lower() == item_name.lower()), None)
         if found:
             orders.remove(found)
@@ -71,19 +79,19 @@ while True:
         else:
             print("Item not found in your current orders.")
     
-    #View current orders
+    # View current orders
     elif option == 4:
         if not orders:
             print("No current orders.")
         
-        #iterate through orders[] and print name and price
+        # Iterate through orders[] and print name and price
         else:
             print("\n--- Current Orders ---")
             for idx, order in enumerate(orders, 1):
                 print(f"{idx}. {order['name']}: {order['price']} VND")
             print("----------------------\n")
     
-    #Calculate order total
+    # Calculate order total
     elif option == 5:
         if not orders:
             print("No items in your order.")
@@ -96,7 +104,7 @@ while True:
                 print(f"You received a discount of 10%!")
             print(f"Now the total order amount is: {total} VND")
     
-    #complete an order
+    # Complete an order
     elif option == 6:
         if not orders:
             print("No items to complete order.")
@@ -104,7 +112,7 @@ while True:
             total = sum(item['price'] for item in orders)
             discount = 0
 
-            #apply discount
+            # Apply discount
             if total >= discount_threshold:
                 discount = total * discount_rate
                 total -= discount
@@ -112,12 +120,11 @@ while True:
             print(f"Order completed. Total amount: {total} VND")
             orders.clear()
     
-    #show total income
+    # Show total income
     elif option == 7:
         print(f"Total income so far: {total_income} VND")
     
-    #quit program
+    # Quit program
     elif option == 8:
         print("Exiting the system. Thanks for visiting BUV Beans and Leaves!")
         break
-
