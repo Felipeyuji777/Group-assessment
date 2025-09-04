@@ -1,5 +1,16 @@
 # Group-assessment
 
+
+
+**AI DISCLOSURE STATEMENT:**
+- AI (ChatGPT) was used to assist us in the process of writing the codes. Below are the lines that were written/assisted by AI:
+- Line 52-54
+- Line 62
+- Line 75
+- Line 90-92
+
+
+
 Welcome to BUV Beans and Leaves!
 This is simple POS system written in Python.
 This program allows you to:
@@ -42,9 +53,4 @@ Enjoy your coffee experience at BUV Beans and Leaves!
 
 
 
-**AI DISCLOSURE STATEMENT:**
-AI (ChatGPT) was used to assist us in the process of writing the codes. Below are the lines that were written/assisted by AI:
-Line 52-54
-Line 62
-Line 75
-Line 90-92
+
