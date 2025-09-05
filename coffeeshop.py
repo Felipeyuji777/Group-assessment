@@ -1,12 +1,8 @@
-# Define list with our menu items
-menu = [
-    {"name": "Americano", "price": 30000},
-    {"name": "Latte", "price": 55000},
-    {"name": "Cappuccino", "price": 55000},
-    {"name": "Phin sua da", "price": 30000},
-    {"name": "Phin den da", "price": 30000}
-]
+import json
 
+#read menu from ./menu.json 
+with open("menu.json", "r") as f: 
+    menu = json.load(f)
 
 # List that keeps track of our orders
 orders = []
@@ -128,4 +124,5 @@ while True:
     elif option == 8:
         print("Exiting the system. Thanks for visiting BUV Beans and Leaves!")
         break
+
 
