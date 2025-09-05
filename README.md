@@ -4,10 +4,10 @@
 
 **AI DISCLOSURE STATEMENT:**
 - AI (ChatGPT) was used to assist us in the process of writing the codes. Below are the lines that were written/assisted by AI:
-- Line 52-54
-- Line 62
-- Line 75
-- Line 90-92
+- Line 48
+- Line 58
+- Line 71
+- Line 86
 
 
 
