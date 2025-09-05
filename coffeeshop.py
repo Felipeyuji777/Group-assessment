@@ -45,7 +45,7 @@ while True:
         print("\n--- Menu ---")
         
         # Iterate through menu[] and print each value
-        for idx, item in enumerate(menu, 1):
+        for idx, item in enumerate(menu, 1): # (AI generated)
             print(f"{idx}. {item['name']}: {item['price']} VND")
         print("------------\n")
     
@@ -55,7 +55,7 @@ while True:
         item_name = input("Enter the name of the item to order: ")
         
         # Search for userinput in menu
-        found = next((item for item in menu if item["name"].lower() == item_name.lower()), None)
+        found = next((item for item in menu if item["name"].lower() == item_name.lower()), None) # (AI generated)
         if found:
             orders.append(found)
             print(f"{found['name']} added to your order.")
@@ -68,7 +68,7 @@ while True:
         item_name = input("Enter the name of the item to cancel: ")
         
         # Search for userinput in menu
-        found = next((item for item in orders if item["name"].lower() == item_name.lower()), None)
+        found = next((item for item in orders if item["name"].lower() == item_name.lower()), None) # (AI generated)
         if found:
             orders.remove(found)
             print(f"{found['name']} removed from your order.")
@@ -83,7 +83,7 @@ while True:
         # Iterate through orders[] and print name and price
         else:
             print("\n--- Current Orders ---")
-            for idx, order in enumerate(orders, 1):
+            for idx, order in enumerate(orders, 1): # (AI generated)
                 print(f"{idx}. {order['name']}: {order['price']} VND")
             print("----------------------\n")
     
@@ -124,5 +124,6 @@ while True:
     elif option == 8:
         print("Exiting the system. Thanks for visiting BUV Beans and Leaves!")
         break
+
 
 
