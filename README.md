@@ -48,7 +48,7 @@ Notes:
 - All prices are in VND (Vietnamese Dong)
 - The system stores orders and total income only during the session (no database or file storage)
 
-Made by Felipe, Anton, Nghia, Khai and Minh
+Made by Felipe(30066358), Anton(30066364), Nghia(30065671), Khai(30066853) and Minh(30066757)
 Enjoy your coffee experience at BUV Beans and Leaves!
 
 
